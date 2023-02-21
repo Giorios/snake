@@ -40,3 +40,11 @@ export function onSnake(position) {
 function equalPositions(pos1, pos2) {
     return pos1.x === pos2.x && pos1.y === pos2.y;
 }
+
+function addSegments() {
+  for (let i = 0; i < newSegments; i++) {
+    snakeBody.push({ ...snakeBody[snakeBody.length - 1] })
+  }
+
+  newSegments = 0
+}

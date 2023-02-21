@@ -20,3 +20,11 @@ export function draw(gameBoard)
         gameBoard.appendChild(foodElement);
 
 }
+
+function getRandomFoodPosition() {
+  let newFoodPosition
+  while (newFoodPosition == null || onSnake(newFoodPosition)) {
+    newFoodPosition = randomGridPosition()
+  }
+  return newFoodPosition
+}
