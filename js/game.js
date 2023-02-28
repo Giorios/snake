@@ -32,6 +32,7 @@ function update() {
   updateSnake()
   updateFood()
   checkDeath()
+  updateScore()
 }
 
 function draw() {
