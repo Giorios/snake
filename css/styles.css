@@ -8,6 +8,37 @@ body {
     background-color: black;
     
 }
+#endScreen{
+    position: absolute;
+    z-index: 101;
+    width: 600px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+#endScreenContent{
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+#endScreen h1{
+color: white;
+font-size: 30px;
+}
+
+#endScreen h2{
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+}
+#endScreen button{
+    color: rgba(53, 49, 66, 0.726);
+    background-color: rgb(217, 250, 164);
+    font-size: 25px;
+    border-radius: 5px;
+    padding: 10px;
+   }
+
 #game-board {
     background-color: rgba(135, 236, 110, 0.829);
     width: 100vmin;

@@ -5,13 +5,13 @@ import { outsideGrid } from './grid.js'
 let lastRenderTime = 0
 let gameOver = false
 const gameBoard = document.getElementById('game-board')
+const element = document.getElementById("restart");
+element.addEventListener("click", replay);
+
 
 function main(currentTime) {
-  if (gameOver) {
-    if (confirm('You lost. Press ok to restart.')) {
-      window.location = '/'
-    }
-    return
+  if (gameOver) {document.getElementById('endScreen').style.display = 'block';
+  SNAKE_SPEED = 0
   }
 
 
@@ -32,7 +32,6 @@ function update() {
   updateSnake()
   updateFood()
   checkDeath()
-  updateScore()
 }
 
 function draw() {
@@ -43,4 +42,8 @@ function draw() {
 
 function checkDeath() {
   gameOver = outsideGrid(getSnakeHead()) || snakeIntersection()
+}
+
+function replay() {
+  location.reload();
 }
