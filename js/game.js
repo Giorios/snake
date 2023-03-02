@@ -4,7 +4,7 @@ import { outsideGrid } from './grid.js'
 
 let lastRenderTime = 0
 let gameOver = false
-const gameBoard = document.getElementById('game-board')
+const gameBoard = document.getElementById('game-board');
 const element = document.getElementById("restart");
 element.addEventListener("click", replay);
 
